@@ -21,6 +21,21 @@ public class Compra {
 	@ManyToMany
 	private List<Livro> livro;
 
+	
+	public Compra() {
+		super();
+	}
+
+	
+	public Compra(Integer id, List<CadastroCliente> cliente, List<Livro> livro) {
+		super();
+		this.id = id;
+		this.cliente = cliente;
+		this.livro = livro;
+	}
+
+
+
 	public Integer getId() {
 		return id;
 	}
