@@ -20,6 +20,7 @@ public class Livro {
 	private String editora;
 	private Integer isbn;
 	private Date anoLancamento;
+	private Integer quantidade;
 
 
 	public Livro() {
@@ -27,7 +28,7 @@ public class Livro {
 	}
 
 	public Livro(Integer id, BigDecimal valor, String genero, String titulo, String editora, Integer isbn,
-			Date anoLancamento) {
+			Date anoLancamento, Integer quantidade) {
 		super();
 		this.id = id;
 		this.valor = valor;
@@ -36,6 +37,7 @@ public class Livro {
 		this.editora = editora;
 		this.isbn = isbn;
 		this.anoLancamento = anoLancamento;
+		this.quantidade = quantidade;
 	}
 	public Integer getId() {
 		return id;
@@ -79,6 +81,15 @@ public class Livro {
 	public void setAnoLancamento(Date anoLancamento) {
 		this.anoLancamento = anoLancamento;
 	}
+	
+	public Integer getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(Integer quantidade) {
+		this.quantidade = quantidade;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
