@@ -19,7 +19,7 @@ public class Compra {
 	private List<CadastroCliente> cliente;
 
 	@ManyToMany
-	private List<Livro> livro;
+	private List<Livro> livros;
 
 
 	public Compra() {
@@ -27,11 +27,11 @@ public class Compra {
 	}
 
 
-	public Compra(Integer id, List<CadastroCliente> cliente, List<Livro> livro) {
+	public Compra(Integer id, List<CadastroCliente> cliente, List<Livro> livros) {
 		super();
 		this.id = id;
 		this.cliente = cliente;
-		this.livro = livro;
+		this.livros = livros;
 	}
 
 
@@ -53,11 +53,11 @@ public class Compra {
 	}
 
 	public List<Livro> getLivro() {
-		return livro;
+		return livros;
 	}
 
-	public void setLivro(List<Livro> livro) {
-		this.livro = livro;
+	public void setLivro(List<Livro> livros) {
+		this.livros = livros;
 	}
 
 

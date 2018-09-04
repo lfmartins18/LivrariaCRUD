@@ -18,8 +18,8 @@ public class Livro {
 	private String genero;
 	private String titulo;
 	private String editora;
-	private Integer isbn;
-	private Date anoLancamento;
+	private String isbn;
+	private java.util.Date anoLancamento = new java.util.Date();
 	private Integer quantidade;
 
 
@@ -27,7 +27,7 @@ public class Livro {
 		super();
 	}
 
-	public Livro(Integer id, BigDecimal valor, String genero, String titulo, String editora, Integer isbn,
+	public Livro(Integer id, BigDecimal valor, String genero, String titulo, String editora, String isbn,
 			Date anoLancamento, Integer quantidade) {
 		super();
 		this.id = id;
@@ -69,19 +69,21 @@ public class Livro {
 	public void setEditora(String editora) {
 		this.editora = editora;
 	}
-	public Integer getIsbn() {
+	public String getIsbn() {
 		return isbn;
 	}
-	public void setIsbn(Integer isbn) {
+	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
-	public Date getAnoLancamento() {
+	
+	public java.util.Date getAnoLancamento() {
 		return anoLancamento;
 	}
-	public void setAnoLancamento(Date anoLancamento) {
+
+	public void setAnoLancamento(java.util.Date anoLancamento) {
 		this.anoLancamento = anoLancamento;
 	}
-	
+
 	public Integer getQuantidade() {
 		return quantidade;
 	}
