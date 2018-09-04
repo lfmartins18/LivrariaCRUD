@@ -1,4 +1,4 @@
-package model;
+package demo.model;
 
 
 import javax.persistence.Entity;
@@ -15,14 +15,9 @@ public class Editora {
 	@GeneratedValue
 	private Integer id;
 
-	@OneToOne
 	private String endereco;
-	
-	@OneToMany
 	private Integer telefoneContato;
-
-	@OneToOne
-	private String nomeGerente;
+    private String nomeGerente;
 
 	public Integer getId() {
 		return id;

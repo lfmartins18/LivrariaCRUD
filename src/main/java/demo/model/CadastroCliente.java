@@ -1,10 +1,11 @@
-package model;
+package demo.model;
 
 import java.sql.Date;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class CadastroCliente {
@@ -17,7 +18,8 @@ public class CadastroCliente {
 	private String cpf;
 	private Integer telefone;
 	//e lista dos livros que este cliente já comprou
-	private List<Livro> livro;
+	@OneToMany
+	private List<Livro> livros;
 	private Date dataCompra;
 
 
@@ -25,7 +27,7 @@ public class CadastroCliente {
 		super();
 	}
 
-	public CadastroCliente(Integer id, String nome, String endereco, String cpf, Integer telefone, List<Livro> livro,
+	public CadastroCliente(Integer id, String nome, String endereco, String cpf, Integer telefone, List<Livro> livros,
 			Date dataCompra) {
 		super();
 		this.id = id;
@@ -33,7 +35,7 @@ public class CadastroCliente {
 		this.endereco = endereco;
 		this.cpf = cpf;
 		this.telefone = telefone;
-		this.livro = livro;
+		this.livros = livros;
 		this.dataCompra = dataCompra;
 	}
 	public Integer getId() {
@@ -66,11 +68,11 @@ public class CadastroCliente {
 	public void setTelefone(Integer telefone) {
 		this.telefone = telefone;
 	}
-	public List<Livro> getLivro() {
-		return livro;
+	public List<Livro> getLivros() {
+		return livros;
 	}
-	public void setLivro(List<Livro> livro) {
-		this.livro = livro;
+	public void setLivros(List<Livro> livros) {
+		this.livros = livros;
 	}
 	public Date getDataCompra() {
 		return dataCompra;

@@ -1,4 +1,4 @@
-package controllers;
+package demo.controllers;
 
 public class LivrariaControllers {
 
